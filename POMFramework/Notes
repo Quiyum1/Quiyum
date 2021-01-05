@@ -1,0 +1,24 @@
+try catch will help to see the loaded page for the time specified by programmer. 		
+
+try {
+Thread.sleep(3000);
+}
+catch (InterruptedException e) 
+{
+e.printStackTrace();
+----------------------------------------------------------
+this will switch to (i)frame. 
+driver.switchTo().frame("oneGoogleBar"); 
+----------------------------------------------------------
+lines below will give the total size of the elements presents in the web.
+-----------------------------------------------------------
+this till show the total number of element present in the web page
+List<WebElement> listOfInputElements = driver.findElements(By.name("//q"));
+int count = listOfInputElements.size();
+System.out.println("count of input elements: "+count);
+----------------------------------------------------------
+sometime search button can be hidden by auto suggestion, so we can use this line of code below
+Actions act = new Actions(driver);
+act.sendKeys(Keys.RETURN).perform();
+----------------------------------------------------------
+
